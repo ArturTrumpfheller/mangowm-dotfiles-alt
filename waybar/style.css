@@ -1,0 +1,378 @@
+/* Allgemeine Einstellungen */
+
+* {
+    min-height: 0;
+
+    font-family: "Noto Sans Mono", monospace;
+    font-size: 14px;
+    font-weight: 500;
+
+    border-radius: 0;
+
+    box-shadow: none;
+    text-shadow: none;
+}
+
+window#waybar {
+    /* Durchgehender Hintergrund bis an den Bildschirmrand */
+    background-color: #1c1b18;
+    color: #ded5c4;
+}
+
+
+/* Module sitzen direkt auf dem gemeinsamen Leistenhintergrund */
+
+#tags,
+#window,
+#clock,
+#bluetooth,
+#network,
+#pulseaudio,
+#backlight,
+#cpu,
+#memory,
+#tray {
+    margin: 0;
+    padding: 0 10px;
+
+    background-color: transparent;
+    color: #ded5c4;
+
+    border: none;
+    border-radius: 0;
+
+    box-shadow: none;
+    text-shadow: none;
+}
+
+
+/* Tags */
+
+#tags {
+    margin-left: 0;
+    padding: 0 3px;
+}
+
+#tags button {
+    min-width: 21px;
+
+    margin: 0;
+    padding: 0 8px;
+
+    background-color: transparent;
+    background-image: none;
+
+    color: #ded5c4;
+
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+
+    font-weight: 500;
+
+    box-shadow: none;
+    text-shadow: none;
+}
+
+/* Alle Tagnummern verwenden dieselbe Schriftfarbe */
+
+#tags button.empty,
+#tags button.occupied {
+    color: #ded5c4;
+}
+
+/* Aktueller Tag */
+
+#tags button.focused {
+    background-color: #40352d;
+    color: #ded5c4;
+
+    border-bottom-color: #c58e65;
+
+    font-weight: 700;
+}
+
+/* Dringender Tag */
+
+#tags button.urgent {
+    background-color: #8f493d;
+    color: #ded5c4;
+
+    border-bottom-color: #d67a64;
+}
+
+/* Hover */
+
+#tags button:hover {
+    background-color: #302d28;
+    background-image: none;
+
+    color: #ded5c4;
+    border-bottom-color: #71695e;
+
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#tags button.focused:hover {
+    background-color: #40352d;
+    color: #ded5c4;
+
+    border-bottom-color: #c58e65;
+}
+
+
+/* Fenstertitel */
+
+#window {
+    color: #ded5c4;
+}
+
+
+/* Uhr */
+
+#clock {
+    color: #f1e8d8;
+    font-weight: 600;
+}
+
+
+/* Bluetooth */
+
+#bluetooth {
+    color: #ded5c4;
+}
+
+#bluetooth.off,
+#bluetooth.disabled,
+#bluetooth.no-controller {
+    color: #817b71;
+}
+
+
+/* Netzwerk */
+
+#network {
+    color: #ded5c4;
+}
+
+#network.disconnected {
+    color: #ad7567;
+}
+
+
+/* Lautstärke */
+
+#pulseaudio {
+    color: #ded5c4;
+}
+
+#pulseaudio.muted {
+    color: #817b71;
+}
+
+
+/* Helligkeit */
+
+#backlight {
+    color: #ded5c4;
+}
+
+
+/* CPU und RAM */
+
+#cpu,
+#memory {
+    color: #ded5c4;
+}
+
+
+/* Tray */
+
+#tray {
+    margin-right: 0;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#tray menu {
+    background-color: #1c1b18;
+    color: #ded5c4;
+
+    border: 1px solid #4a443b;
+    border-radius: 0;
+}
+
+#tray menu menuitem {
+    background-color: transparent;
+    color: #ded5c4;
+
+    border-radius: 0;
+}
+
+#tray menu menuitem:hover {
+    background-color: #35312b;
+}
+
+
+/* Tooltips */
+
+tooltip {
+    background-color: #1c1b18;
+    color: #ded5c4;
+
+    border: 1px solid #4a443b;
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+tooltip label {
+    padding: 5px;
+
+    background-color: transparent;
+    color: #ded5c4;
+}
+
+/* Monitorhelligkeit und GPU-Auslastung */
+
+#custom-brightness,
+#custom-gpu {
+    margin: 0;
+    padding: 0 10px;
+
+    background-color: transparent;
+    color: #ded5c4;
+
+    border: none;
+    border-radius: 0;
+
+    box-shadow: none;
+    text-shadow: none;
+}
+
+/* =========================================================
+ * Mango-Tags – abschließende Überschreibung
+ * ========================================================= */
+
+/* Alle Mango-Tags auf demselben durchgehenden Hintergrund */
+#workspaces {
+    margin: 0;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+/* Tags bleiben klickbar, ohne getrennte Kästchen */
+#workspaces button {
+    min-width: 22px;
+    min-height: 24px;
+
+    margin: 0;
+    padding: 0 8px;
+
+    background-color: transparent;
+    background-image: none;
+
+    color: #ded5c4;
+
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+
+    box-shadow: none;
+    text-shadow: none;
+
+    font-weight: 500;
+}
+
+/*
+ * Die Farbe zusätzlich direkt auf das GTK-Label setzen.
+ * Dadurch kann das GTK-Theme die Zahlen nicht mehr abdunkeln.
+ */
+#workspaces button label {
+    color: #ded5c4;
+
+    text-shadow: none;
+    font-weight: 500;
+}
+
+/* Leere Tags bleiben genauso hell wie die restliche Schrift */
+#workspaces button.empty,
+#workspaces button.empty label,
+#workspaces button.current_output,
+#workspaces button.current_output label {
+    color: #ded5c4;
+}
+
+/* Aktuell ausgewählter Tag */
+#workspaces button.active {
+    background-color: #40352d;
+    background-image: none;
+
+    color: #ded5c4;
+
+    border-bottom-color: #c58e65;
+
+    box-shadow: none;
+    font-weight: 700;
+}
+
+#workspaces button.active label {
+    color: #ded5c4;
+    font-weight: 700;
+}
+
+/* Dringender Tag */
+#workspaces button.urgent {
+    background-color: #8f493d;
+    background-image: none;
+
+    color: #f1e8d8;
+
+    border-bottom-color: #d67a64;
+}
+
+#workspaces button.urgent label {
+    color: #f1e8d8;
+}
+
+/* Hover über einem normalen Tag */
+#workspaces button:hover {
+    background-color: #302d28;
+    background-image: none;
+
+    color: #ded5c4;
+
+    border-color: #71695e;
+
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#workspaces button:hover label {
+    color: #ded5c4;
+}
+
+/* Der aktive Tag bleibt beim Darüberfahren klar markiert */
+#workspaces button.active:hover {
+    background-color: #40352d;
+    background-image: none;
+
+    color: #ded5c4;
+
+    border-bottom-color: #c58e65;
+    box-shadow: none;
+}
+
+#workspaces button.active:hover label {
+    color: #ded5c4;
+}
