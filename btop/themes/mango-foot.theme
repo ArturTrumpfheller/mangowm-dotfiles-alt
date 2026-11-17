@@ -1,0 +1,74 @@
+# Mango Foot - btop theme for Gentoo, MangoWM, Foot and Neovim.
+# Based on the user's original Foot terminal and MangoWM color palette.
+# Install at ~/.config/btop/themes/mango-foot.theme
+# Hex colors are intentionally kept opaque to match Foot (alpha=1.0).
+
+# Base: Foot background / foreground, Mango copper focus border.
+theme[main_bg]="#1c1b18"
+theme[main_fg]="#ded5c4"
+theme[title]="#c58e65"
+theme[hi_fg]="#e0b17c"
+theme[selected_bg]="#4a443b"
+theme[selected_fg]="#f1e8d8"
+theme[inactive_fg]="#625e55"
+theme[graph_text]="#d4ccbc"
+theme[meter_bg]="#312c25"
+theme[proc_misc]="#91a2ad"
+
+# Box outlines: warm copper, leaf green, steel blue, dusty mauve.
+theme[cpu_box]="#c58e65"
+theme[mem_box]="#97a46d"
+theme[net_box]="#91a2ad"
+theme[proc_box]="#b18b98"
+theme[div_line]="#4a443b"
+
+# Temperatures: cool to hot.
+theme[temp_start]="#7f895b"
+theme[temp_mid]="#c58e65"
+theme[temp_end]="#c66a55"
+
+# CPU usage: warm up as utilization increases.
+theme[cpu_start]="#7f895b"
+theme[cpu_mid]="#c58e65"
+theme[cpu_end]="#c66a55"
+
+# Free memory / disk space.
+theme[free_start]="#708c85"
+theme[free_mid]="#8ca9a2"
+theme[free_end]="#97a46d"
+
+# Cached memory.
+theme[cached_start]="#516c93"
+theme[cached_mid]="#758693"
+theme[cached_end]="#91a2ad"
+
+# Available memory.
+theme[available_start]="#7f895b"
+theme[available_mid]="#97a46d"
+theme[available_end]="#d4ccbc"
+
+# Used memory / disk space.
+theme[used_start]="#625e55"
+theme[used_mid]="#c58e65"
+theme[used_end]="#ad5a49"
+
+# Network traffic: down is blue, up is teal/copper.
+theme[download_start]="#516c93"
+theme[download_mid]="#758693"
+theme[download_end]="#91a2ad"
+theme[upload_start]="#708c85"
+theme[upload_mid]="#8ca9a2"
+theme[upload_end]="#e0b17c"
+
+# Process CPU/memory gradients.
+theme[process_start]="#7f895b"
+theme[process_mid]="#c58e65"
+theme[process_end]="#ad5a49"
+
+# Newer btop process-following and pause indicators.
+theme[proc_pause_bg]="#4a443b"
+theme[proc_follow_bg]="#516c93"
+theme[proc_banner_bg]="#ad5a49"
+theme[proc_banner_fg]="#f1e8d8"
+theme[followed_bg]="#4a443b"
+theme[followed_fg]="#f1e8d8"
